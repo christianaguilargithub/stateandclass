@@ -33,28 +33,23 @@ class App extends Component {
     )
   };
 
-  nightmode = () => {
-    this.setState.a(prevState => ({
-      nightmode: !prevState.a.check
-    }));
-  }
+  nightmode = () => {this.setState(prevState => ({
+    nightmode: prevState.nightmode === 'true' ? 'true' : 'false'
+  }));}
 
   render(){
-    let status
+    let status,head
     if(this.state.mode.nightmode === true){
-      status = "Night Mode";
+      status = "Day Mode";
+      head = "App-header";
     } else {
-        status = "Day Mode";
+        status = "Night Mode";
+        head = "App-header1";
     }
-    let stat
-    if(this.state.mode.nightmode === true){
-      stat = "App-header";
-    } else {
-        stat = "App-header1";
-    }
+
     return (
       <div className="App">
-        <header className="{stat}">
+        <header className="App-header">
         <button className="" type="submit" onClick={this.nightmode}>{status}</button>
           <h1>{this.state.count}</h1>
           <div className="btns">

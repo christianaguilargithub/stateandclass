@@ -36,20 +36,20 @@ class App extends Component {
       }
     )
   };
-
-
   render(){
-    let status
+    let status, modeSwitch
     if(this.state.mode === true){
       status = "Light Mode";
+      modeSwitch = "App-header";
     } else {
         status = "Dark Mode";
+        modeSwitch = "App-header1";
     }
 
     return (
       <div className="App">
-        <header className="App-header">
-        <button className="btn" type="submit" onClick={this.toggle}>{status}</button>
+        <header className={`${modeSwitch}`}>
+        <button className="btn" type="submit" onClick={this.toggle }>{status}</button>
           <h1>{this.state.count}</h1>
           <div className="btns">
             <button className="inc" type="submit" onClick={this.increase}>Increase</button>

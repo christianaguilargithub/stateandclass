@@ -34,7 +34,7 @@ class App extends Component {
   };
 
   nightmode = () => {this.setState(prevState => ({
-    nightmode: prevState.nightmode === 'true' ? 'true' : 'false'
+    nightmode: prevState.nightmode === git 'true' ? 'true' : 'false'
   }));}
 
   render(){
